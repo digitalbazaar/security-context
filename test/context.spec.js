@@ -6,25 +6,20 @@ chai.should();
 const {expect} = chai;
 
 const {
-  contexts, constants, appContextMap, CONTEXT_URL, CONTEXT
+  contexts, constants, CONTEXT_URL, CONTEXT,
+  SECURITY_CONTEXT_V1_URL, SECURITY_CONTEXT_V2_URL
 } = require('..');
-
-const contextUrl = constants.CONTEXT_URL;
 
 describe('Example Context', () => {
   it('constants', async () => {
-    expect(appContextMap).to.exist;
     expect(constants).to.exist;
-    expect(constants).to.have.property('CBORLD_VALUE');
+    expect(SECURITY_CONTEXT_V1_URL).to.exist;
+    expect(SECURITY_CONTEXT_V2_URL).to.exist;
     expect(CONTEXT_URL).to.exist;
     expect(CONTEXT).to.exist;
   });
 
   it('contexts', async () => {
-    expect(contexts.get(contextUrl)).to.have.property('@context');
-  });
-
-  it('appContextMap', async () => {
-    expect(appContextMap.get(contextUrl)).to.exist;
+    expect(contexts.get(SECURITY_CONTEXT_V2_URL)).to.have.property('@context');
   });
 });
