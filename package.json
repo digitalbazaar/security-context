@@ -1,7 +1,7 @@
 {
-  "name": "context-template",
+  "name": "@digitalbazaar/security-context",
   "version": "0.0.1",
-  "description": "Context template repository.",
+  "description": "Compact isomorphic clone of ccg security-context.",
   "main": "js/index.js",
   "module": "./dist/context.esm.js",
   "files": [
@@ -11,17 +11,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/context-template"
+    "url": "https://github.com/digitalbazaar/security-context"
   },
   "bugs": {
-    "url": "https://github.com/digitalbazaar/context-template/issues"
+    "url": "https://github.com/digitalbazaar/security-context/issues"
   },
   "author": {
     "name": "Digital Bazaar, Inc.",
     "email": "support@digitalbazaar.com",
     "url": "https://digitalbazaar.com/"
   },
-  "homepage": "https://github.com/digitalbazaar/context-template#readme",
+  "homepage": "https://github.com/digitalbazaar/security-context#readme",
   "license": "BSD-3-Clause",
   "devDependencies": {
     "@babel/core": "^7.11.0",
@@ -50,11 +50,10 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "npm run clean && npm run serialize && webpack && rollup -c",
-    "clean": "rm -rf dist/* && rm -rf contexts/*.jsonld",
+    "build": "npm run clean && webpack && rollup -c",
+    "clean": "rm -rf dist/*",
     "lint": "eslint js test",
     "prepare": "npm run build",
-    "serialize": "node bin/serialize.js",
     "test": "npm run lint && npm run build && npm run test-node && npm run test-karma",
     "test-karma": "karma start test/karma.conf.js",
     "test-node": "cross-env NODE_ENV=test mocha --preserve-symlinks test/*.spec.js"

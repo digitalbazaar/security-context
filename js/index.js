@@ -3,20 +3,22 @@
  */
 'use strict';
 
-const context = require('./context');
+const secv1 = require('./security-v1');
+const secv2 = require('./security-v2');
 const constants = require('./constants');
-const {CONTEXT_URL, CBORLD_VALUE} = constants;
+const {
+  CONTEXT_URL, SECURITY_CONTEXT_V1_URL, SECURITY_CONTEXT_V2_URL
+} = constants;
 
 const contexts = new Map();
-contexts.set(CONTEXT_URL, context);
-
-const appContextMap = new Map();
-appContextMap.set(CONTEXT_URL, CBORLD_VALUE);
+contexts.set(SECURITY_CONTEXT_V1_URL, secv1);
+contexts.set(SECURITY_CONTEXT_V2_URL, secv2);
 
 module.exports = {
   constants,
   contexts,
-  appContextMap,
+  SECURITY_CONTEXT_V1_URL,
+  SECURITY_CONTEXT_V2_URL,
   CONTEXT_URL,
-  CONTEXT: context
+  CONTEXT: secv2
 };
