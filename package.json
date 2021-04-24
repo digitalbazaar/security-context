@@ -1,6 +1,6 @@
 {
   "name": "@digitalbazaar/security-context",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "Compact isomorphic clone of ccg security-context.",
   "main": "js/index.js",
   "module": "./dist/context.esm.js",
