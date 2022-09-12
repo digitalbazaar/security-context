@@ -3,7 +3,7 @@
   "version": "1.0.1-0",
   "description": "Compact isomorphic clone of ccg security-context.",
   "main": "js/index.js",
-  "module": "./dist/context.esm.js",
+  "module": "./dist/context.js",
   "files": [
     "contexts",
     "dist/context.js",
