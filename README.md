@@ -1,6 +1,6 @@
 # Linked Data Security Context Repository _(@digitalbazaar/security-context)_
 
-[![Build status](https://img.shields.io/github/workflow/status/digitalbazaar/security-context/Node.js%20CI)](https://github.com/digitalbazaar/security-context/actions?query=workflow%3A%22Node.js+CI%22)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/digitalbazaar/security-context/main.yml)](https://github.com/digitalbazaar/security-context/actions/workflows/main.yml)
 [![NPM Version](https://img.shields.io/npm/v/@digitalbazaar/security-context.svg)](https://npm.im/@digitalbazaar/security-context)
 
 > Compact isomorphic clone of CCG's security-context.
