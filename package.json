@@ -6,6 +6,7 @@
   "module": "./dist/context.esm.js",
   "files": [
     "contexts",
+    "dist/context.esm.js",
     "dist/context.js",
     "js"
   ],
