@@ -11,12 +11,18 @@ jobs:
         node-version: [12.x, 14.x, 16.x, 18.x, 20.x]
     steps:
     - uses: actions/checkout@v3
+    # FIXME: Install/build with 16.x until webpack is updated
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+    - name: Install
+      run: npm install
+    # FIXME: Run tests with target version until webpack is updated
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install
-      run: npm install
     - name: Run test with Node.js ${{ matrix.node-version }}
       run: npm run test-node
   test-karma:
@@ -24,7 +30,7 @@ jobs:
     timeout-minutes: 10
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [16.x]
         bundler: [webpack]
     steps:
     - uses: actions/checkout@v3
@@ -43,7 +49,7 @@ jobs:
     timeout-minutes: 10
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [16.x]
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
