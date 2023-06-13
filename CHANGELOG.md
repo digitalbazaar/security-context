@@ -1,6 +1,6 @@
 # security-context ChangeLog
 
-## 1.0.1 - 2023-06-xx
+## 1.0.1 - 2023-06-13
 
 ### Fixed
 - Distribute `./dist/context.esm.js`.
